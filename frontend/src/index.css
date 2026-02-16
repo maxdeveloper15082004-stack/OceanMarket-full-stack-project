@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc; /* Light gray background like modern apps */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom Navbar */
+.navbar-custom {
+    background-color: white;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1rem 0;
+}
+
+.brand-text {
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-btn {
+    border-radius: 9999px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.nav-btn-outline {
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    background: white;
+}
+
+.nav-btn-outline:hover {
+    background: #f1f5f9;
+}
+
+/* Hero Section */
+.hero-gradient {
+    background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+    color: white;
+    padding: 4rem 0;
+}
+
+.hero-btn {
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.hero-btn-primary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+.hero-btn-primary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Pill Navigation */
+.pill-nav {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Allow scrolling on small screens */
+    padding-bottom: 5px; /* Space for scrollbar if visible */
+    /* Hide scrollbar for standard browsers (Firefox, newer Chrome) */
+    scrollbar-width: none; 
+    /* Hide scrollbar for IE 10+ */
+    -ms-overflow-style: none; 
+}
+
+@media (min-width: 992px) {
+    .pill-nav {
+        justify-content: center;
+    }
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge, etc.) */
+.pill-nav::-webkit-scrollbar {
+    display: none; 
+    width: 0px;
+    background: transparent;
+}
+
+.pill-item {
+    border-radius: 9999px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.pill-item.active {
+    background: #0ea5e9;
+    color: white;
+    border-color: #0ea5e9;
+}
+
+.pill-item.active svg {
+    color: white !important;
+    fill: white !important;
+}
+
+.pill-item:hover:not(.active) {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* Product Cards */
+.product-card {
+    background: white;
+    border-radius: 16px; /* Rounded corners like reference */
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-tag {
+    background: #f1f5f9;
+    color: black !important;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: black !important;
+    margin-bottom: 0.5rem;
+}
+
+.card-desc {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Animations */
+.wave-animation {
+    /* Keep existing wave if needed or remove if clutter */
+    display: none; 
+}
+
+/* Back to Home Button - Attractive Blue Gradient */
+.btn-back-home {
+    background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+    color: white !important;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -1px rgba(37, 99, 235, 0.1);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-decoration: none !important;
+}
+
+.btn-back-home:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3), 0 4px 6px -2px rgba(37, 99, 235, 0.1);
+    background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%);
+    color: white !important;
+}
+
+.btn-back-home svg {
+    transition: transform 0.3s ease;
+}
+
+.btn-back-home:hover svg {
+    transform: translateX(-4px);
+}
